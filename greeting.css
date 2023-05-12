@@ -1,0 +1,69 @@
+body {
+    background-color: grey;
+    text-align: center;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 640px;
+    height: 480px;
+    transition: 2s;
+    perspective: 1200px;
+}
+
+.card:hover .first{
+    transform: rotateY(-180deg);
+}
+
+img {
+    width: 90%;
+    height: 90%;
+    padding: 1px;
+    object-fit: scale-down;
+}
+
+.first {
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    transform-origin: left;
+}
+
+.second {
+    left: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: burlywood;
+}
+
+.first {
+    z-index: 1;
+    background-color: burlywood;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: 2s;
+}
+
+.back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: burlywood;
+    transform: rotateY(180deg);
+}
+
+.front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+h1 {
+    text-align: center;
+}

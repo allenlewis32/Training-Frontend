@@ -1,0 +1,60 @@
+body {
+    text-align: center;
+}
+div {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+}
+#a{
+    background: red;
+}
+#b{
+    background: green;
+}
+#c{
+    background: blue;
+}
+#d{
+    background: yellow;
+}
+#e{
+    background: crimson;
+}
+#f{
+    background: ghostwhite;
+}
+#g{
+    background: darkmagenta;
+}
+#a:hover {
+    transform: translate(100px, 100px);
+}
+#b:hover {
+    transform: scaleX(2);
+}
+#c:hover {
+    transform: scaleY(2);
+}
+#d:hover {
+    transform: rotate(45deg);
+}
+#e:hover {
+    transform: skewX(45deg);
+}
+#f:hover {
+    transform: skewY(45deg);
+}
+#g:hover {
+    transform: matrix(1, 2, -1, 1, 50, 50);
+}
+#h {
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#h:hover {
+    overflow: visible;
+}
