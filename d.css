@@ -1,0 +1,82 @@
+body {
+    width: 100%;
+    background-color: burlywood;
+}
+
+.container {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+    display: grid;
+}
+
+.row1 {
+    grid-row: 1;
+}
+
+.row2 {
+    grid-row: 2;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    transition: all 0.5s;
+    grid-row: 1;
+    border-radius: 5px;
+    
+}
+
+.left {
+    animation-name: left;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes left {
+    from{transform: translateX(-100%)}
+    to{transform: translateX(0)}
+}
+
+.right {
+    animation-name: right;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes right {
+    from{transform: translateX(100%)}
+    to{transform: translateX(0)}
+}
+
+.top {
+    animation-name: top;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes top {
+    from{transform: translateY(-100%)}
+    to{transform: translateY(0)}
+}
+
+.bottom {
+    animation-name: bottom;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes bottom {
+    from{transform: translateY(100%)}
+    to{transform: translateY(0)}
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px black;
+}
