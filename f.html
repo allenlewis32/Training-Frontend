@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script>
+            var processed = [];
+            function calculate() {
+                name = document.getElementById("name").value
+                date = new Date(document.getElementById("date").value)
+                price = Number(document.getElementById("price").value)
+                if(processed[name]===undefined) {
+                    var discount = 0
+                    switch(date.getDay()) {
+                        case 0:
+                            discount = 15;
+                            break;
+                        case 1:
+                            discount = 15;
+                            break;
+                        case 2:
+                            discount = 10;
+                            break;
+                        case 3:
+                            discount = 12;
+                            break;
+                        case 4:
+                            discount = 11;
+                            break;
+                        case 5:
+                            discount = 13;
+                            break;
+                        case 6:
+                            discount = 14;
+                            break;
+                    }
+                    price *= 1 - discount / 100;
+                    processed[name] = true;
+                }
+                document.getElementById("result").innerHTML = "Final price: " + price;
+            }
+        </script>
+    </head>
+    <body style="font-family: monospace;">
+        Name:&nbsp; <input id="name"><br><br>
+        Date:&nbsp; <input type="date" id="date"><br><br>
+        Price: <input type="number" id="price"><br><br>
+        <input type="button" value="Submit" onclick="calculate()"><br><br>
+        <div id="result"></div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script>
+            var gv = []
+            function purchase() {
+                name = document.getElementById("name").value
+                price = Number(document.getElementById("price").value)
+                if(gv[name] === undefined) {
+                    gv[name] = 100;
+                }
+                if(price > 5000) {
+                    gv[name] += 3000;
+                } else if(price > 3000) {
+                    gv[name] += 1500;
+                } else if(price > 1000) {
+                    gv[name] += 500;
+                }
+                document.getElementById("result").innerHTML = "GV: " + gv[name];
+            }
+            function getGV() {
+                name = document.getElementById("name").value
+                var result = gv[name];
+                if(result === undefined) {
+                    result = "Customer hasn't visited the shop yet";
+                } else {
+                    result = "GV: " + result;
+                }
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+    </head>
+    <body style="font-family: monospace;">
+        Name:&nbsp; <input id="name"><br><br>
+        Price: <input type="number" id="price"><br><br>
+        <input type="button" value="Purchase" onclick="purchase()"><br><br>
+        <input type="button" value="Get GV" onclick="getGV()"><br><br>
+        <div id="result"></div>
+    </body>
+</html>
+
+<!--
+A new shopping mall has been opened in the city. To attract people and to bring in crowd, the mall has announced some schemes. 
+If the cost of any purchased items value is more than 1000, a 500 GV will be given.
+If the cost of any purchased items value is more than 3000, a 1500 GV will be given.
+
+Based on the user visits and purchase, give the gifts to the people.-->
